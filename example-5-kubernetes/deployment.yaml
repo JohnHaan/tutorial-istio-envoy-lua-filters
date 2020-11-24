@@ -45,7 +45,7 @@ spec:
           image: envoyproxy/envoy-dev:latest
           command: [ "/usr/local/bin/envoy", "-c", "/etc/config/envoy/envoy.yaml", "-l", "debug", "--service-cluster", "proxy" ]
           ports:
-            - containerPort: 80
+            - containerPort: 8000
           volumeMounts:
           - name: config-volume-lua
             mountPath: /var/lib/lua
